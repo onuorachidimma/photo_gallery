@@ -45,45 +45,60 @@ const PhotoGallery = () => {
   };
 
   return (
-    <div>
-      <h1>Photo Gallery</h1>
+    <div className="p-4">
+      <h1 className="text-3xl font-bold mb-4 text-center uppercase">
+        Photo Gallery
+      </h1>
 
-      <form onSubmit={handleSearch}>
-        <div>
+      <form onSubmit={handleSearch} className="mb-4">
+        <div className="flex w-[90%] md:w-[50%] justify-center mx-auto ">
           <input
             type="text"
             placeholder="Search for photos..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            className="border  w-[60%] md:[80%] p-3 outline-0"
           />
-          <button type="submit">Search</button>
+          <button
+            type="submit"
+            className="bg-gray-600 text-white w-[40%] md:w-[20%] block p-3"
+          >
+            Search
+          </button>
         </div>
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
+      {error && <p className="text-red-500">Error: {error.message}</p>}
 
-      <div>
+      <div className="masonry-layout">
         {photos.map((photo) => (
-          <div key={photo.id}>
+          <div key={photo.id} className="relative group overflow-hidden mb-2">
             <img
               src={photo.urls.small}
               alt={photo.alt_description}
+              className="w-full h-auto object-cover"
             />
-            <div>
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-end p-2 transition-opacity">
               <img
                 src={photo.user.profile_image.small}
                 alt={photo.user.name}
+                className="w-8 h-8 rounded-full mr-2"
               />
-              <p>{photo.user.name}</p>
+              <p className="text-white text-sm">{photo.user.name}</p>
             </div>
           </div>
         ))}
       </div>
 
       {!loading && photos.length > 0 && (
-        <div>
-          <button onClick={loadMorePhotos}>Load More</button>
+        <div  className="text-center flex justify-center mt-4">
+          <button
+            onClick={loadMorePhotos}
+            className="bg-gray-600 text-white block p-3"
+          >
+            Load More
+          </button>
         </div>
       )}
     </div>

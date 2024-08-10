@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.masonry-layout {
+    column-count: 3;
+    column-gap: 1rem;
+  }
+  
+  .masonry-layout .group {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 768px) {
+    .masonry-layout {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .masonry-layout {
+      column-count: 1;
+    }
+  }
+    
