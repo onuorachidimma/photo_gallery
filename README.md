@@ -1,3 +1,45 @@
+# Day 9 - Photo Gallery App
+
+## Activity Overview
+
+### Task:
+- Build a photo gallery app using React JS that integrates with the Unsplash API to fetch and display images.
+
+### Goals:
+- **API Integration:** Learn to fetch data from an external API using React.
+- **React Components:** Create and structure UI components in React.
+- **State Management:** Use React's `useState` and `useEffect` hooks for handling component state and side effects.
+- **Error Handling:** Implement error handling to manage API call failures and provide user feedback.
+
+### Steps:
+1. **Set Up React Environment:** Initialize a React app using `create-react-app`.
+2. **Create `PhotoGallery` Component:** Build the core component to fetch and display photos.
+3. **Integrate Unsplash API:** Use the API key to fetch photos and display them in a grid layout.
+4. **Build UI:** Design a simple, responsive UI to showcase the photos and photographer details.
+5. **Handle State and Errors:** Manage loading states, handle errors, and ensure a smooth user experience.
+
+
+## Technologies Used
+- **React JS:** For building the user interface.
+- **Unsplash API:** For fetching photos.
+- **HTML/CSS:** For basic styling and layout.
+- **JavaScript:** For handling asynchronous operations and state management.
+
+## Screenshots
+![Screenshot 1](./src/assets/images/photGallery_desktop.PNG)
+![Screenshot 2](./src/assets/images/photoGallery_mobile.PNG)
+
+## Live Link
+[View Live Demo](https://photo-gallery-five-rho.vercel.app/)
+- Type any image you want on the search bar and the images will load. You can also click on the "Load mor button" for more images
+
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/photo-gallery-app.git
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
